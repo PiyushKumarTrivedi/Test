@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+  
+    <ion-title>uploader</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <app-loading *ngIf="busy"></app-loading>
+   
+  <div>
+ 
+    <ion-grid>
+      <ion-row (click)="model() ">
+        <ion-col size="2">
+       
+          <ion-thumbnail>
+            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+          </ion-thumbnail>
+        
+        </ion-col>
+        <ion-col size="10">
+        Whats in your mind?
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  
+  <div class="camera"></div>
+  <input type="hidden" role="uploadcare-uploader" name="my_file"
+  data-crop="free, 16:9, 4:3, 5:4, 1:1"
+/>
+  <!-- <ngx-uploadcare-widget
+  images-only="true"
+  public-key="9c96a97b3a776a411cef"
+  data-crop="free, 16:9, 4:3, 5:4, 1:1"> 
+</ngx-uploadcare-widget> -->
+ 
+ 
+
+</ion-content>

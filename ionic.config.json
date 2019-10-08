@@ -1,5 +1,8 @@
 {
   "name": "Crodal-Social",
-  "integrations": {},
-  "type": "angular"
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "abe5cef6"
 }

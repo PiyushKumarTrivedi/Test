@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title slot="start">Crodal Registration </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-item>
+    <ion-label position="floating" >User Name</ion-label>
+    <ion-input [(ngModel)]="this.username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating" >Password</ion-label>
+    <ion-input type="password" [(ngModel)]="this.password" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating" >Confirm Password</ion-label>
+    <ion-input type="password"  [(ngModel)]="this.cpassword" ></ion-input>
+  </ion-item>
+</ion-list>
+ 
+
+  <ion-button  class="ion-margin-vertical" (click)="Register()" expand="block">Login</ion-button>
+</ion-content>

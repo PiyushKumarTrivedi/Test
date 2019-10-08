@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <app-loading *ngIf="!userPosts"></app-loading>
+<div id="images" *ngIf="userPosts">
+<div class="image" *ngFor="let post of userPosts?.posts">
+  <ion-card  (click)="goToPost(post?.image)"  routerDirection="forward" >
+    <ion-img   src="https://ucarecdn.com/{{post?.image}}/-/resize/300x/"></ion-img>
+  </ion-card>
+ 
+  <ion-content>
+    <p>
+        {{post?.desc}}
+    </p></ion-content>
+</div>
+</div>
+</ion-content>

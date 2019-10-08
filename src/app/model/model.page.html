@@ -1,0 +1,63 @@
+<ion-header padding translucent>
+  <ion-toolbar>
+    <ion-nav-pop slot="start">
+      <ion-button color="dark" fill="outline" size="small" routerDirection="backword">Back</ion-button>
+    </ion-nav-pop>
+  
+  
+   
+  
+   
+  
+  
+  
+    <ion-button shape="round" color="primary"     float-right     (click)="createPost()" strong padding size="small">
+      </ion-button>
+      <ion-icon name="share-alt" color="primary" icon="arrow"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+ <div>
+ 
+ </div>
+<ion-content class="black">
+  <!-- <ngx-uploadcare-widget 
+  [images-only]="true" 
+  [tabs]="all" 
+    public-key="9c96a97b3a776a411cef">
+    </ngx-uploadcare-widget> -->
+
+  <input #imgupload type="file" *ngIf='!imageUrl' class="filebtn" name="imgUpload" id="imgUpload" multiple (change)="fileChanged($event)">
+
+
+  
+
+  <!-- <ion-input slot="start"></ion-input>
+  <ion-textarea [(ngModel)]="PComment" autocomplete="on" autocorrect="on" color="primary" multiple spellcheck padding placeholder="Post Comments...."></ion-textarea> -->
+  <ion-card *ngIf="imageUrl" color="secondary">
+      <ion-img src="https://ucarecdn.com/{{imageUrl}}/" padding></ion-img>
+  </ion-card>
+
+
+  <ion-button shape="round" *ngIf="!imageUrl" color="primary" (click)="uploadFile()" size="small" fill="outline">
+      <ion-icon name="cloud-upload"></ion-icon>
+    
+    upload Image</ion-button>
+    
+
+  <ion-grid class="black">
+    <ion-row>
+      <ion-col col-12>
+       
+      </ion-col>
+      
+      
+      
+    </ion-row>
+  </ion-grid>
+
+  <input type="hidden" role="uploadcare-uploader" name="my_file"
+        data-effects="crop,rotate,enhance,sharp,grayscale" />
+          
+</ion-content>
+
+

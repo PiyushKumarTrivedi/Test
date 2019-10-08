@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-nav-pop slot="start">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-nav-pop>
+  
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding scrollY fullscreen>
+<app-loading *ngIf="!postDetails"></app-loading>
+
+
+  <div *ngIf="postDetails">
+        
+  <ion-card padding>
+    <ion-card-header color="light">     
+      <ion-card-title>Post Details</ion-card-title>
+    </ion-card-header>
+    <ion-img  src="https://ucarecdn.com/{{this.postId}}/-/resize/300x/"></ion-img>
+    <ion-card-content>
+      <p>{{this.postDetails?.desc}}</p>
+      
+    </ion-card-content>
+  
+  </ion-card>
+    <ion-fab vertical="top" horizontal="end" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+    
+  <ion-fab     vertical="bottom" horizontal="start"   slot="fixed">
+      <ion-fab-button class="mini">
+        <ion-icon name="arrow-dropright"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list  side="top">
+         
+           
+          <app-rating  [(rating1)]="this.rating3" ></app-rating>
+          <app-like   ></app-like> 
+      </ion-fab-list>
+       
+    </ion-fab>
+  
+  
+   
+  
+  </div>
+</ion-content>

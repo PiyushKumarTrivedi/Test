@@ -1,0 +1,95 @@
+// // .comments{
+// //   border-color: black;
+// //   background-color: black;
+  
+.widget__button {
+    all: initial;
+  
+    display: inline-block;
+  
+    box-sizing: border-box;
+  
+    margin: 0;
+    padding: var(--widget-padding-v) var(--widget-padding-h);
+    width: auto;
+    min-width: 0;
+    height: auto;
+    min-height: 0;
+  
+    border-radius: 6px;
+    border: none;
+  
+    background: var(--widget-button-color);
+    color: #fff;
+  
+    cursor: default;
+  
+    text-align: center;
+    white-space: nowrap;
+  
+    font: inherit;
+    line-height: inherit;
+  
+    box-shadow: none;
+    text-shadow: inherit;
+  
+    transition: background .3s;
+  
+    &:hover,
+    &:focus {
+      background: var(--widget-button-color-hover);
+      color: #fff;
+  
+      font: inherit;
+      box-shadow: none;
+      text-shadow: inherit;
+    }
+  
+    &:focus {
+      outline: var(--widget-focus-outline);
+      outline-offset: 1px;
+    }
+  
+    &:active {
+      background: var(--widget-button-color-active);
+    }
+  
+    &:disabled {
+      background: var(--widget-button-color);
+      color: #fff;
+  
+      cursor: not-allowed;
+    }
+  }
+// // }
+
+// .camera{
+//     width: 200px;
+//     height: 200px;
+//     background-color: black;
+//     display: none;
+// }
+ 
+// .filebtn{
+//     opacity: 0;
+//     position: absolute; 
+//     top: -100em;
+//     left:-100em;
+// }
+// .center{
+//     display: flex;
+//     justify-content: center;
+//     align-content: center;
+// }
+
+.page{
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: 100%;
+ 
+}
+
+  

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cordal Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-item>
+    <ion-label position="floating" >User Name</ion-label>
+    <ion-input    [(ngModel)]="this.username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating" >Password</ion-label>
+    <ion-input [(ngModel)]="this.password" ></ion-input>
+  </ion-item>
+</ion-list>
+ 
+
+  <ion-button  class="ion-margin-vertical" (click)="login()" expand="block">Login</ion-button>
+</ion-content>
