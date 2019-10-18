@@ -7,7 +7,9 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { VideoCapturePlus, VideoCapturePlusOptions, MediaFile } from '@ionic-native/video-capture-plus/ngx';
 
+//import { NgOpenCVModule } from 'projects/ng-open-cv/src/lib/ng-open-cv.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -21,6 +23,15 @@ import { UsersService } from './common/users.service';
 import { SharePageModule } from './component/loading/Share.module';
 import { UcWidgetModule } from 'ngx-uploadcare-widget';
 import { ThemeableBrowser } from '@ionic-native/themeable-browser/ngx';
+//import { OpenCVOptions } from 'projects/ng-open-cv/src/public_api';
+
+// const openCVConfig: OpenCVOptions = {
+//   scriptUrl: `assets/opencv/opencv.js`,
+//   wasmBinaryFile: 'wasm/opencv_js.wasm',
+//   usingWasm: true
+// };
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [ModelPage],
@@ -33,15 +44,17 @@ import { ThemeableBrowser } from '@ionic-native/themeable-browser/ngx';
      AngularFirestoreModule,
      HttpModule,
      SharePageModule,
-     UcWidgetModule
-     
+    UcWidgetModule,
+    //NgOpenCVModule.forRoot(openCVConfig),
     ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     UsersService,
-    AuthServiceService,ThemeableBrowser
+    AuthServiceService,
+    ThemeableBrowser,
+    VideoCapturePlus
   ],
   bootstrap: [AppComponent]
 })
